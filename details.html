@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flipkart:View your fav product</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSstH6l0aS7iQLI3rLI2K9hjWK-_vkC8yDOHfMz-BF2Rw&s">
+
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><div class="logo">
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                width="75px" height="20px"></a>
+            <p>
+                Explore <span class="span">plus</span>
+            </p>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search for products and more">
+            <img class="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRQ7ahPueEdP0d7LV5PCeArFStix8CeU-W8g&usqp=CAU"
+                alt="">
+        </div>
+        <button class="btn"> Login</button>
+        <a href="" class="link"> Become a Seller</a>
+        <a href="" class="link">More
+            <i class="fa-solid fa-angle-down" class="more"></i>
+
+
+        </a>
+
+        <a href="cart.html" class="link"> <i class="fa-solid fa-cart-shopping"></i> Cart </a>
+
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="mainpage">
+        <div class="imageclass">
+            <img id="pic" src="" alt="">
+        </div>
+        <div class="fulldetails">
+            <h1 id="title"></h1>
+            <p>A sweatshirt is a long-sleeved pullover shirt fashioned out of thick, usually cotton cloth material.
+                Sweatshirts are almost exclusively casual attire and hence not as dressy as some sweaters.
+                Sweatshirts may or may not have a hood. A sweatshirt with a hood is now usually referred to as a hoodie,
+                although more formal media still use the term "hooded sweatshirt"</p>
+            <br>
+            <h3 id="cate"></h3>
+            <br>
+            <h2 id="price"></h2>
+            <br> <br>
+            <a href="index.html"><button class="home">Go Home</button></a>
+            <button id="cart" onclick="my()" class="home">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="left">
+
+            <div>
+                <div class="title">Get to Know Us </div>
+                About Us
+                Carrers <br>
+                Press Releases <br>
+                Amazon
+                Gift a Smile <br>
+                Amazon Science
+            </div>
+
+            <div>
+                <div class="title">Connect With Us </div>
+                Facebook <br>
+                Twitter <br>
+                Instagram <br>
+            </div>
+            <div>
+                <div class="title">Make Money with Us </div>
+                Sell on Amazon
+                Sell under Amazon <br>
+                Become an Affiliate <br>
+                fulfilment by Amazon <br>
+                Amazon Pay on Merchants
+            </div>
+            <div>
+                <div class="title"> Let us help you </div>
+                COVID-19 and Amazon
+                Your Account <br>
+                Returns centre <br>
+                100% Purchase Protection <br>
+                Amazon assistant Download <br>
+                Help
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        <div class="right">
+
+            <div>
+                <div class="title">Indusires</div>
+                Education <br>
+                Healthcare
+                New Age Markerting <br>
+                Travel & Hospitality
+            </div>
+            <div>
+                <div class="title"> Address </div>
+                Unit no-310 Second Floor <br>
+                DLF Cyber City,patia
+                Bhubaneswar,Odisha ,751024 <br>
+                Karnataka, India <br>
+
+                CIN : U51109KA2012PTC066107 <br>
+
+                Telephone: 044-45614700
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    let product = JSON.parse(localStorage.getItem('oneProduct'))
+
+    document.getElementById('pic').setAttribute('src', product.image);
+    document.getElementById('title').innerText = product.title;
+    document.getElementById('cate').innerText = `Category: ${product.category}`;
+    document.getElementById('price').innerText = `Price: $ ${product.price}`;
+
+    function my() {
+        let allPro = JSON.parse(localStorage.getItem('allProduct')) || []
+        allPro.push(product)
+        localStorage.setItem('allProduct', JSON.stringify(allPro))
+        alert('Product Added to the Cart')
+    }
+
+</script>

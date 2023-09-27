@@ -1,0 +1,136 @@
+.mainpage{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+#pic{
+    width: 80%;
+    border-radius: 15px;
+}
+.fulldetails{
+    padding-left: 10px;
+    width: 100%;
+}
+h1{
+    font-size: 70px;
+}
+p{
+    font-size: 20px;
+}
+span{
+    color: rgb(37, 123, 236);
+}
+.home{
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 1px solid green;
+    background-color: lightgreen;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home:hover{
+    transform: scale(0.9);
+}
+
+footer{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    margin-top: 5px;
+    display: flex;
+    grid-template-columns: 6fr 6fr;
+    padding-bottom: 100px;
+}
+.left{
+    color:white;    
+  
+    display: grid;
+   grid-template-columns: 3fr 3fr 3fr 3fr;
+   padding-right: 5px;
+   padding-left: 100px;
+}
+.right{
+    color:white;
+  
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding-left: 10px;
+}
+.title{
+    color: silver;
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+.logo p{
+    color:white;
+    top: -5px;
+    position: relative;
+
+}
+.span{
+    color: yellow;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 3px 2px; */
+    background-color: blue;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+    position: fixed;
+    z-index: 1;
+}
+.search{
+    background-color: white;
+    width: 400px;
+    padding: 5px;
+    margin: 7px 0px;
+    left: 10px;
+    box-shadow: -7px -7px 10px rgba(0,0,0,0.1)
+    7px 7px 10px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    height: 20px;
+    margin: 15px 15px;
+}
+.search input{
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    color: blue;
+    box-shadow: -7px -7px 10px rgba(0,0,0,0.1)
+    7px 7px 10px rgba(0,0,0,0.1);
+    font-size: 15px;
+    border-radius: 2px;
+    width: 70px;
+    display: flex;
+    justify-content: end;
+}
+.link{
+    margin: 0px 25px;
+    color: white;
+    text-decoration-line: none;
+    font-size: 17px;
+}
+.img{
+    width: 4%;
+    color: skyblue;
+}
+.more{
+    font-size: 2px;
+}
+.logout{
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+    text-decoration: none;
+}
